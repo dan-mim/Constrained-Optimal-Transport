@@ -1,0 +1,1 @@
+I used a MNIST dataset with 40x40 pics you can find it here: https://yann.lecun.com/exdb/mnist/
