@@ -24,7 +24,7 @@ To reproduce the experiment:
 
 ```bash
 cd localization_pb
-python demo_localization.py
+python location_pb_execution.py
 ```
 
 This script:
