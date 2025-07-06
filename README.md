@@ -95,7 +95,7 @@ python demo_localization.py
 This demo loads input distributions, applies MAM(..., constraint=project_onto_stock), and visualizes the resulting constrained barycenter in a classical storage localization problem — where the goal is to determine optimal warehouse locations for goods, balancing both rental costs and transportation expenses.
 
 <p align="center">
-  <img src="figs/6.PNG" width="400"/>
+  <img src="figs/6.PNG" width="300"/>
 </p>
 
 ### 🔹 ℓ₁-constrained extension
@@ -135,6 +135,6 @@ Original MAM paper:
 
 ## ✨ Contribution & Exploration
 
-- Feel free to extend MAM to non-convex constraints or GAN-based priors.
-- Use `project_onto_stock` and `sparse_MAMLasso/` as templates.
+- Feel free to extend MAM to non-convex constraints or [GAN-based priors](https://github.com/dan-mim/wasserstein-morphing-mamGAN).
+- Use `project_onto_stock` as template.
 - Pull requests and discussions are welcome — especially for applications in imaging, scenario tree reduction, or structure-constrained OT.
