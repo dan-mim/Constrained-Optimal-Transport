@@ -83,7 +83,7 @@ Optimal_Transport_Extensions/
 │   ├── solver.py             # core constrained MAM implementation
 │   └── utils/
 │       └── project_onto_stock.py
-├── localization_pb/          # transport + projection demo
+├── location_pb/          # transport + projection demo
 ├── sparse_MAMLasso/          # research prototype (ℓ₁ constraints)
 ├── requirements.txt
 └── README.md
@@ -96,8 +96,8 @@ Optimal_Transport_Extensions/
 ### 🔹 Example: Localization with stock constraint
 
 ```bash
-cd localization_pb
-python demo_localization.py
+cd location_pb
+python location_pb_execution.py
 ```
 
 This demo loads input distributions, applies MAM(..., constraint=project_onto_stock), and visualizes the resulting constrained barycenter in a classical storage localization problem — where the goal is to determine optimal warehouse locations for goods, balancing both rental costs and transportation expenses.
