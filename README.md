@@ -7,9 +7,13 @@ This repository extends the Method of Averaged Marginals (MAM) to compute **cons
 *"On the Computation of Constrained Wasserstein Barycenters"*, arXiv ([dan-mim.github.io](https://dan-mim.github.io/files/constrained_Wasserstein.pdf))
 
 ⚙️ This includes:
-- A **Cmam** package with the function `MAM()` to compute barycenters under convex constraints.
+- A **Cmam** package with the function `MAM()` to compute barycenters under convex constraints -- if your constraint is not convex it also works but MAM becomes an heuristic.
 - A working example in `localization_pb/` implementing projection onto a feasible set (`project_onto_stock`) exactly like **Algorithm 1** from the article.
 - A research prototype in `sparse_MAMLasso/` for ℓ₁-constrained barycenters (not fully developed, but available for inspiration).
+
+<p align="center">
+  <img src="figs/denoising.PNG" width="1000"/>
+</p>
 
 ---
 
@@ -35,33 +39,27 @@ pip install -r requirements.txt
 
 We extend the classic MAM via **Douglas–Rachford splitting** to solve the constrained problem:
 
-\[
-\min_{\mu \in \mathcal{P}} \frac{1}{M}\sum_{m=1}^M W_2^2(\mu, \nu_m)
-\quad\text{s.t.}\quad \mu \in X
-\]
+<p align="center">
+  <img src="figs/Cbary.PNG" width="500"/>
+</p>
+
 
 By discretizing and fixing support, it becomes:
 
-\[
-\min_{p \in X, \;\pi^m \ge 0} \sum_{m=1}^M\langle c^m, \pi^m\rangle
-\quad\text{s.t.}\;\Pi^m\text{ marginals match }p
-\]
+<p align="center">
+  <img src="figs/Cbary_discrete.PNG" width="500"/>
+</p>
+
 
 **Algorithm 1: Constrained MAM (Douglas–Rachford)**  
-```latex
-\[
-\begin{aligned}
-\text{Given } \theta^0,~~\rho > 0.\\
-\text{Repeat for }k=0,1,\dots: \\
-\quad \pi^{k+1} &= \mathrm{Proj}_{B_X}(\theta^k) \\
-\quad \hat{\pi}^{k+1} &= \arg\min_{\pi\in \Pi}
-\left\langle c,\pi\right\rangle+\frac{\rho}{2}\|\pi-(2\pi^{k+1}-\theta^{k})\|^2 \\
-\quad \theta^{k+1} &= \theta^k + \hat{\pi}^{k+1} - \pi^{k+1}
-\end{aligned}
-\]
-```
 
-- *Proj\_{B\_X}* enforces marginals average into the convex constraint set *X*.
+<p align="center">
+  <img src="figs/algo.PNG" width="500"/>
+</p>
+
+
+
+- The *projection onto Bx* enforces marginals average into the convex constraint set *X*.
 - Matches **Algorithm 1** exactly as implemented in `Cmam/utils/project_onto_stock.py`.
 
 ---
@@ -71,7 +69,7 @@ By discretizing and fixing support, it becomes:
 ```
 Optimal_Transport_Extensions/
 ├── Cmam/
-│   ├── __init__.py           # exposes MAM, utils
+│   ├── __init__.py           
 │   ├── solver.py             # core constrained MAM implementation
 │   └── utils/
 │       └── project_onto_stock.py
