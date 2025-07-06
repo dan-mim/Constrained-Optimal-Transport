@@ -11,6 +11,8 @@ This repository extends the Method of Averaged Marginals (MAM) to compute **cons
 - A working example in `localization_pb/` implementing projection onto a feasible set (`project_onto_stock`) exactly like **Algorithm 1** from the article.
 - A research prototype in `sparse_MAMLasso/` for ℓ₁-constrained barycenters (not fully developed, but available for inspiration).
 
+Here is an example on how the constraint can be used to denoise images:
+
 <p align="center">
   <img src="figs/denoising.PNG" width="1000"/>
 </p>
