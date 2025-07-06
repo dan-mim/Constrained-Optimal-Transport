@@ -2,7 +2,7 @@
 <h1 align="center">📍 Constrained Wasserstein Barycenter — Localization Problem</h1>
 
 <p align="center">
-This folder reproduces the numerical results of the paper:<br>
+This folder reproduces the numerical results of Section 3.2 of the paper:<br>
 <b>"On the Computation of Constrained Wasserstein Barycenters"</b><br>
 Mimouni, de Oliveira, Sempere (2025)<br>
 <a href="https://dan-mim.github.io/files/constrained_Wasserstein.pdf">[Read the paper]</a>
