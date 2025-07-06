@@ -43,7 +43,8 @@ res_lasso = []
 l_lasso = np.linspace(0, 2*10**-4, 10)
 for lasso in l_lasso : #, 50, 100]
     res_lasso.append(
-        MAM(b,lasso=lasso, rho=.1, exact=False, name=f'outputs/res_lasso.pkl', computation_time=100, iterations_min=iterations, iterations_max=iterations, precision=10 ** -6)
+        MAM(b,lasso=lasso, rho=.1, exact=False, name=f'res_lasso.pkl',
+            computation_time=100, iterations_min=iterations, iterations_max=iterations, precision=10 ** -6)
     )
 
 # Taille de la figure globale
