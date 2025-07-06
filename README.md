@@ -11,7 +11,7 @@ This repository extends the Method of Averaged Marginals (MAM) to compute **cons
 - A working example in `localization_pb/` implementing projection onto a feasible set (`project_onto_stock`) exactly like **Algorithm 1** from the article.
 - A research prototype in `sparse_MAMLasso/` for ℓ₁-constrained barycenters (not fully developed, but available for inspiration).
 
-Here is an example on how the constraint can be used to denoise images:
+Below is an example on how the constraint can be used to denoise images. In image (e) the constrained is on the number of elements in the support of the barycenter, while (d) tries a direct denoising technique after the computation of the barycenter.
 
 <p align="center">
   <img src="figs/denoising.PNG" width="1000"/>
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 We extend the classic MAM via **Douglas–Rachford splitting** to solve the constrained problem:
 
 <p align="center">
-  <img src="figs/Cbary.PNG" width="500"/>
+  <img src="figs/Cbary.PNG" width="400"/>
 </p>
 
 
@@ -56,7 +56,7 @@ By discretizing and fixing support, it becomes:
 **Algorithm 1: Constrained MAM (Douglas–Rachford)**  
 
 <p align="center">
-  <img src="figs/algo.PNG" width="500"/>
+  <img src="figs/algo.PNG" width="800"/>
 </p>
 
 
@@ -93,6 +93,10 @@ python demo_localization.py
 ```
 
 This demo loads input distributions, applies `MAM(..., constraint=project_onto_stock)`, and visualizes the barycenter under constraints.
+
+<p align="center">
+  <img src="figs/6.PNG" width="400"/>
+</p>
 
 ### 🔹 ℓ₁-constrained extension
 
