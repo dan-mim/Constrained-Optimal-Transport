@@ -1,3 +1,9 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.8%2B-green)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Platform](https://img.shields.io/badge/platform-MPI%20%7C%20CPU-lightgrey)
+![Last Commit](https://img.shields.io/github/last-commit/dan-mim/Optimal_Transport_Extensions)
+![Repo Size](https://img.shields.io/github/repo-size/dan-mim/Optimal_Transport_Extensions)
 
 # 🧭 Optimal Transport Extensions
 
