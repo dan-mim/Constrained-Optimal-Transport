@@ -51,7 +51,6 @@ The workflow illustrated above:
 
 - `location_pb_execution.py`: Main script that runs the experiment
 - `dataset/`: Contains saved spatial distributions
-- `pic_results/`: Folder containing output visualizations (e.g. Paris maps, heatmaps)
 - `Cmam/utils/project_onto_stock.py`: Constraint projection operator, enforcing cardinality or spatial masks
 - Dependencies: uses the `Cmam` package found in the root of the repository
 
