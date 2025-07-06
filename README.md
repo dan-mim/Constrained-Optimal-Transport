@@ -5,7 +5,8 @@
 ![Last Commit](https://img.shields.io/github/last-commit/dan-mim/Optimal_Transport_Extensions)
 ![Repo Size](https://img.shields.io/github/repo-size/dan-mim/Optimal_Transport_Extensions)
 
-# Constrained Wasserstein barycenter
+<h1 align="center">Constrained Wasserstein Barycenter</h1>
+
 ## 🧭 Optimal Transport Extensions
 
 This repository extends the Method of Averaged Marginals (MAM) to compute **constrained Wasserstein barycenters**, based on:
