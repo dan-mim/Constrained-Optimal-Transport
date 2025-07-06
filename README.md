@@ -92,7 +92,7 @@ cd localization_pb
 python demo_localization.py
 ```
 
-This demo loads input distributions, applies `MAM(..., constraint=project_onto_stock)`, and visualizes the barycenter under constraints.
+This demo loads input distributions, applies MAM(..., constraint=project_onto_stock), and visualizes the resulting constrained barycenter in a classical storage localization problem — where the goal is to determine optimal warehouse locations for goods, balancing both rental costs and transportation expenses.
 
 <p align="center">
   <img src="figs/6.PNG" width="400"/>
