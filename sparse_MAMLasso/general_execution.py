@@ -8,22 +8,11 @@ Created on Sat Feb  4 12:43:38 2023
 # %% Imports
 
 # Basics
-import numpy as np
-import pandas as pd
-import scipy.io
-import time
-import random
-import matplotlib.pyplot as plt
-import numpy.matlib
-import pickle
-import numpy as np
 # CPU management:
-from mpi4py import MPI
-import sys
 
 # My codes:
 # MAM
-from MAM import *
+from sparse_MAMLasso.SparseMAM.solver import *
 
 
 # parallel work parameters:
