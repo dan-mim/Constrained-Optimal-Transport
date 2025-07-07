@@ -94,13 +94,14 @@ Optimal_Transport_Extensions/
 ## ▶️ Usage
 
 ### 🔹 Example: Localization with stock constraint
+More details [here](/localisation-pb/)
 
 ```bash
 cd location_pb
 python location_pb_execution.py
 ```
 
-This demo loads input distributions, applies MAM(..., constraint=project_onto_stock), and visualizes the resulting constrained barycenter in a classical storage localization problem — where the goal is to determine optimal warehouse locations for goods, balancing both rental costs and transportation expenses.
+This demo loads input distributions, applies MAM(..., constraint=project_onto_stock), and visualizes the resulting constrained barycenter in a classical storage [localization problem](/localisation-pb/) — where the goal is to determine optimal warehouse locations for goods, balancing both rental costs and transportation expenses.
 
 <p align="center">
   <img src="figs/6.PNG" width="300"/>
